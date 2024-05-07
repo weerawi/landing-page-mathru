@@ -52,7 +52,7 @@ const BlogPost = ( ) => {
         
         {/* <img className="w-full h-full object-cover" src={mother} alt="Profile" /> */}
         <div className={`card-content absolute text-gray-600 bg-white bg-opacity-60 backdrop-blur-md h-80   px-5 flex justify-center 
-        w-full transition-all duration-1000  bottom-[-250px] md:bottom-[-180px]  lg:bottom-[-180px] ${bottomClass} 
+        w-full transition-all duration-1000  bottom-[-250px] md:bottom-[-180px]  lg:bottom-[-100px] ${bottomClass} 
         shadow-inner border-t border-white border-opacity-60 flex flex-col items-center justify-start`}>
           <div className='text-xl '>
             <LiaAngleDoubleUpSolid />

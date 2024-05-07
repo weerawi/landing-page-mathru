@@ -1,5 +1,5 @@
 import React from 'react'
-import Mobile from '../assets/homebg2.jpg' 
+import Mobile from '../assets/western.png' 
 const About = () => {
   return ( 
       <div className='max-w-[1000px] mx-auto py-10  h-[100vh] flex items-center justify-center'>
@@ -31,14 +31,20 @@ const About = () => {
                 data-aos="flip-left"
                 data-aos-easing="ease-out-cubic"
                 data-aos-duration="1400">
-                  <img  src={Mobile} alt='hero' className='rounded-br-[100px] sm:rounded-br-[130px] md:rounded-br-[200px] xl:rounded-br-[300px]
-                  rounded-tl-[100px] sm:rounded-tl-[130px] md:rounded-tl-[200px] xl:rounded-tl-[300px]' />
+                  <img  src={Mobile} alt='hero' className='rounded-br-[50px] sm:rounded-br-[80px] md:rounded-br-[100px] xl:rounded-br-[150px]
+                  rounded-tl-[50px] sm:rounded-tl-[80px] md:rounded-tl-[100px] xl:rounded-tl-[150px]' />
                 </div>
 
               
             </div>
           </div>
         </div>
+
+
+
+
+
+        
       </div>
     
   )

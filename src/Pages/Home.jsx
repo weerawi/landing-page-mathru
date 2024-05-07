@@ -99,13 +99,17 @@ const Home = () => {
 
                 <div className='py-10'>
                     <Swiper {...params} >
-                        <div><ProfileCard image={doctor1} name="Ajinstha"/></div>
-                        <div><ProfileCard image={doctor2} name="Samitha"/></div>
-                        <div><ProfileCard image={doctor3} name="Tharindu"/></div>
-                        <div><ProfileCard image={doctor1} name="Ajinstha"/></div>
-                        <div><ProfileCard image={doctor2} name="Samitha"/></div>
-                        <div><ProfileCard image={doctor3} name="Tharindu"/></div>
-                        <div><ProfileCard image={doctor1} name="Tharindu"/></div>
+                        <div><ProfileCard image={doctor1} name="Kapila Jayaratne" position="National Programme Manager - Child Morbidity & Mortality" /></div>
+                        <div><ProfileCard image={doctor2} name="Professor Vajira Dissanayake" position="Geneticist / Dean - Faculty of Medicine, University of Colombo" /></div>
+                        <div><ProfileCard image={doctor3} name="Chithramalee de Silva" position="Director – Maternal & Child Health" /></div>
+                        <div><ProfileCard image={doctor1} name="Chamli Pushpakumara" position="Dean - Faculty of Computing and Technology, University of Kelaniya" /></div>
+                        <div><ProfileCard image={doctor2} name="Dineshani Hettiarachchi" position="Senior Lecturer" /></div>
+                        <div><ProfileCard image={doctor3} name="R.R.L.U.I. Rajapaksha" position="Senior Lecturer" /></div>
+                        <div><ProfileCard image={doctor1} name="MRM Rishard" position="Honorary Consultant & Senior Lecturer" /></div>
+                        <div><ProfileCard image={doctor1} name="Roshan Hewapathirana" position="Senior Lecturer" /></div>
+                        <div><ProfileCard image={doctor1} name="P. W. Prasad Chathurangana" position="Honorary Consultant & Senior Lecturer" /></div>
+                        <div><ProfileCard image={doctor1} name="Kaushalya Kasturiarachchi" position="National Programme Manager – Monitoring & Evaluation" /></div>
+                        <div><ProfileCard image={doctor1} name="Sidath R. Liyanage" position="Senior Lecturer" /></div>
                     </Swiper>
                 </div>
                 
