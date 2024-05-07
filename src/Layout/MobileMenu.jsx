@@ -13,18 +13,15 @@ const MobileMenu = ({ mobileclick }) => {
 
 
   return (
-    <div className='text-gray-300 h-full'
+    <div className='text-black h-full'
     style={{
         backdropFilter: 'blur(3px)',
-        background: 'rgba(0,0,0, 0.1)' ,
+        background: 'rgba(255,255,255, 0.7)' ,
       }}>
         <div className='w-[80%] max-w-[1200px] mx-auto'>
             <div className='flex flex-col items-center p-5'>
                 <div className='flex items-center mb-16 p-2 rounded-2xl '  
-                style={{
-                    backdropFilter: 'blur(3px)',
-                    background: 'rgba(255,255,255, 0.5)' ,
-                  }}
+                 
                   >
                     <img src={logo} alt='hero' width={50} />
                     <Link to='/' className='text-2xl font-poppins tracking-widest ' onClick={() => {scrollToSection('hero-section');
