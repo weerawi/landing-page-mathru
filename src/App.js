@@ -4,6 +4,7 @@ import Home from "./Pages/Home";
 import { useEffect } from 'react';
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Suspense } from 'react';
  
 
 function App() {
@@ -24,10 +25,11 @@ function App() {
 
   return (
     <Layout>  
-
+      <Suspense fallback={null}>
         <Routes>
           <Route path="/" element={<Home />} />  
         </Routes>
+      </Suspense>
     </Layout>
     
   );
