@@ -6,6 +6,9 @@ import { Drawer, makeStyles } from "@material-ui/core";
 import { BiMenuAltRight } from "react-icons/bi";
 import { VscChromeClose } from "react-icons/vsc";
 import MobileMenu from "./MobileMenu";
+//for traslation
+import { useTranslation } from 'react-i18next';
+import i18next from 'i18next';
 
 const useStyles = makeStyles((theme) => ({
   drawer: {
@@ -23,6 +26,24 @@ const Header = () => {
   const [isFixed, setIsFixed] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
   const classes = useStyles();
+
+  //for translation
+  const { i18n, t } = useTranslation(["header"])
+
+  useEffect (() => {
+    if (localStorage.getItem("i18nextLng")?.length >2) {
+      i18next.changeLanguage("en")
+    }
+  },[]
+
+  )
+
+  const handleLanguageChange = (e) => {
+    i18n.changeLanguage(e.target.value)
+  }
+
+
+  //set the navbar fit when scrolling
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
@@ -90,43 +111,53 @@ const Header = () => {
               Mathru
             </Link>
           </div>
-          <div className="  gap-5 hidden lg:flex text-base lg:text-lg">
+          <div className="  gap-5 hidden lg:flex text-base lg:text-lg font-poppins">
             <Link
               onClick={() => scrollToSection("about-section")}
               to="#"
               className="   transition-all hover:font-semibold hover:scale-105 "
+              style={{ fontSize: localStorage.getItem('i18nextLng') === 'ta' ? '0.6rem' : '1rem' }}
             >
-              About
+              {t("about")}
             </Link>
             {/* <Link onClick={() => scrollToSection('welcome-section')} to='#' className='   transition-all hover:font-semibold hover:scale-105 '>Welcome</Link> */}
             <Link
               onClick={() => scrollToSection("services-section")}
               to="#"
               className="   transition-all hover:font-semibold hover:scale-105 "
+              style={{ fontSize: localStorage.getItem('i18nextLng') === 'ta' ? '0.6rem' : '1rem' }}
             >
-              Services
+              {t("services")}
             </Link>
             <Link
               onClick={() => scrollToSection("doctors-section")}
               to="#"
               className="   transition-all hover:font-semibold hover:scale-105 "
+              style={{ fontSize: localStorage.getItem('i18nextLng') === 'ta' ? '0.6rem' : '1rem' }}
             >
-              Doctors
+              {t("doctors")}
             </Link>
             <Link
               onClick={() => scrollToSection("blog-section")}
               to="#"
               className="   transition-all hover:font-semibold hover:scale-105 "
+              style={{ fontSize: localStorage.getItem('i18nextLng') === 'ta' ? '0.6rem' : '1rem' }}
             >
-              Blog
+              {t("blog")}
             </Link>
             <Link
               onClick={() => scrollToSection("contact-section")}
               to="#"
               className="   transition-all hover:font-semibold hover:scale-105 "
+              style={{ fontSize: localStorage.getItem('i18nextLng') === 'ta' ? '0.6rem' : '1rem' }}
             >
-              Contact
+              {t("contact")}
             </Link>
+            <select value={localStorage.getItem("i18nextLng")} onChange={handleLanguageChange} className='bg-transparent border-transparent transition-all hover:font-semibold hover:scale-105 ' style={{ fontSize: localStorage.getItem('i18nextLng') === 'ta' ? '0.6rem' : '1rem' }}>
+              <option value="en">English</option>
+              <option value="ta">தமிழ்</option>
+              <option value="sn">සිංහල</option>
+            </select>
           </div>
 
           {/* Mobile icon start */}
