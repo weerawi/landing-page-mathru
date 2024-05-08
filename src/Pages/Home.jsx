@@ -21,9 +21,11 @@ import doctor1 from '../assets/doctor1.jpg';
 import doctor2 from '../assets/doctor2.jpg';
 import doctor3 from '../assets/doctor3.jpg';
 
-//contact-section
-import Contact from './Contact'
+//blog-section
+import blog from '../assets/blog1.png'
 
+//contact-section
+import Contact from './Contact' 
 
 const Home = () => {
 
@@ -92,7 +94,7 @@ const Home = () => {
                 {/* Content of the doctors section */}
                 <div className='flex items-center justify-center py-5'>
                     <div className='py-5'>
-                        <h1 className=' p-5  font-semibold text-3xl md:5xl text-gray-500 tracking-widest flex justify-center uppercase'>Our Specialised Team</h1>
+                        <h1 className=' p-5  font-semibold text-3xl md:5xl text-gray-500 tracking-widest flex justify-center uppercase'>Our Team</h1>
                     </div> 
                 </div>
 
@@ -149,7 +151,7 @@ const Home = () => {
                     <div className='   realtive flex justify-center p-5'>
                         <div className='flex flex-col md:flex-row mx-auto items-center justify-around my-5 pt-10   rounded-3xl ' style={{
                     backdropFilter: 'blur(10px)',
-                    background: 'rgba(0, 255, 255, 0.4)',
+                    background: 'rgba(0, 255, 255, 0.2)',
                     }}>
                             <div className='  flex flex-col items-center w-full md:w-3/5 p-5' >
                                 <h1 className='text3xl md:text-4xl tracking-wider capitalize font-semibold'>Welcome to the Healthy Pregnancy Center! </h1>
@@ -169,6 +171,10 @@ const Home = () => {
                 </div>
          
          </div>
+
+
+         
+         
          
 
 
@@ -176,21 +182,81 @@ const Home = () => {
 
         {/* blog section */}
 
-      <div id="blog-section" className='py-10 bg-gray-300'>
+      <div id="blog-section" className='py-10 '
+      style={{
+        background: `linear-gradient(to bottom right, rgba(25, 167, 206, 0.4) 10%, rgba(0, 139, 139, 0.5)40%, rgba(144, 224, 239, 0.6) 90%)`,
+      }}>
           {/* Content of the blog section */}
 
           <div>
+          <h1 className=' py-10  font-semibold text-3xl md:5xl text-gray-500 tracking-widest flex justify-center uppercase'>Blog</h1>
 
-          <h1 className=' p-5  font-semibold text-3xl md:5xl text-gray-500 tracking-widest flex justify-center uppercase'>Blog</h1>
+
+            <div className='grid grid-cols-1 xl:grid-cols-2 gap-x-[104px] gap-y-[56px]'> 
+              <div className='w-full max-w-[548px] h-full mx-auto '>
+                <img src={blog} alt='' />
+                <div className='flex justify-between items-center w-full'>
+                  <div >
+                    <h2>Aim </h2>
+                    <p>descriptio Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                       Eum adipisci nam voluptas omnis quisquam totam veritatis aut illo quis b
+                       eatae molestiae animi repudiandae ducimus, bland</p>
+                  </div>
+                </div>
+
+              </div>
+              <div className='w-full max-w-[548px] h-full mx-auto'>
+                <img src={blog} alt='' />
+                <div className='flex justify-between items-center w-full'>
+                  <div >
+                    <h2>Aim </h2>
+                    <p>descriptio Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                       Eum adipisci nam voluptas omnis quisquam totam veritatis aut illo quis b
+                       eatae molestiae animi repudiandae ducimus, bland</p>
+                  </div>
+                </div>
+
+              </div>
+              <div className='w-full max-w-[548px] h-full mx-auto'>
+                <img src={blog} alt='' />
+                <div className='flex justify-between items-center w-full'>
+                  <div >
+                    <h2>Aim </h2>
+                    <p>descriptio Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                       Eum adipisci nam voluptas omnis quisquam totam veritatis aut illo quis b
+                       eatae molestiae animi repudiandae ducimus, bland</p>
+                  </div>
+                </div>
+
+              </div>
+              <div className='w-full max-w-[548px] h-full mx-auto'>
+                <img src={blog} alt='' />
+                <div className='flex justify-between items-center w-full'>
+                  <div >
+                    <h2>Aim </h2>
+                    <p>descriptio Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                       Eum adipisci nam voluptas omnis quisquam totam veritatis aut illo quis b
+                       eatae molestiae animi repudiandae ducimus, bland</p>
+                  </div>
+                </div>
+
+              </div> 
+            </div>
+
+
+
+
+
+            {/* <h1 className=' p-5  font-semibold text-3xl md:5xl text-gray-500 tracking-widest flex justify-center uppercase'>Blog</h1>
            
 
             <div className='grid grid-rows-1 lg:grid-cols-2 '>
-            <BlogPost  />
-            <BlogPost  />
-            <BlogPost  />
-            <BlogPost  />
-           
-          </div>
+              <BlogPost  />
+              <BlogPost  />
+              <BlogPost  />
+              <BlogPost  />
+            
+            </div> */}
           </div>
 
           
@@ -201,8 +267,16 @@ const Home = () => {
        
         {/* contact section */}
 
-      <div id="contact-section">
-        {/* Content of the contact section */}
+      <div id="contact-section" 
+      >
+        {/* Content of the contact section */} 
+
+
+
+
+
+
+
 
         <Contact/>
       </div>

@@ -1,6 +1,12 @@
 import React from 'react'
 import Mobile from '../assets/western.png' 
+//for translation
+import { useTranslation } from 'react-i18next';
+
 const About = () => {
+  //for translation
+  const { t } = useTranslation(["about"])
+
   return ( 
       <div className='max-w-[1000px] mx-auto py-10  h-[100vh] flex items-center justify-center'>
         <div class=" realtive ">
@@ -11,19 +17,14 @@ const About = () => {
               <div className='bgpink-200 flex-1 order-2 xl:order-none'>
 
 
-              <h1 className=' p-5  font-semibold text-3xl md:5xl text-gray-500 tracking-widest flex justify-center uppercase'>About Us</h1>
+              <h1 className=' p-5  font-semibold text-3xl md:5xl text-gray-500 tracking-widest flex justify-center uppercase'>{t("heading")}</h1>
            
               <p className='font-roboto tracking-wider' 
                 data-aos="fade-up"
                 data-aos-offset="300"
                 data-aos-easing="ease-in-sine">
                 
-                A population-based Birth Cohort Study will be conducted in the Western Province of Sri Lanka
-            with a Maternal Health Enhancement (MHE) mobile application. The app includes AI predictive 
-            models capable of predicting preterm birth, low birth weight, preeclampsia, perinatal mortality, 
-            and postpartum depression in advance. MHE will deliver health advice/alerts directly to 
-          the pregnant mother's mobile phone through push notifications with simultaneous alerts for 
-          healthcare providers. AI models will also be used in data analysis.
+                {t("body")}
                 </p>
               </div>
 
