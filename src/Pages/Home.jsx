@@ -11,7 +11,7 @@ import ImageSlider from '../Components/ImageSlider'
 import About from '../Components/About'
 
 import ProfileCard from '../Components/ProfileCard'
-import BlogPost from '../Components/BlogPost' 
+
 
 
 //doctors-section
@@ -21,7 +21,11 @@ import doctor1 from '../assets/doctor1.jpg';
 import doctor2 from '../assets/doctor2.jpg';
 import doctor3 from '../assets/doctor3.jpg';
 
+//welcome-section
+import pregnant from '../assets/pregnant.png'
+
 //blog-section
+import BlogPost from '../Components/BlogPost' 
 import blog from '../assets/blog1.png'
 
 //contact-section
@@ -74,7 +78,8 @@ const Home = () => {
 
       {/* About section */}
 
-      <div id="about-section" className=' mt-24'>
+      <div id="about-section" className=' mt-24'
+      >
        
         
 
@@ -82,7 +87,7 @@ const Home = () => {
 
 
 
-         
+      </div>
 
 
         {/* doctors section */}
@@ -123,44 +128,40 @@ const Home = () => {
             </svg>
         </div>
 
-     
-
-
-      </div>
-
 
 
 
  
-
-        
-
          {/*welcome section   */}
 
-         <div className='h-screen flex items-center'>
+         <div className='min-h-screen flex items-center' >
+
+            {/* <img src={pregnant} alt='pregnant png' /> */}
          
          
-                <div className=' w-full md:w-[80%] lg:w-[60%] mx-auto  mb-10 shadow-xl rounded-2xl  ' style={{ 
-                    backgroundImage: `url(${mother})`,
-                    backgroundSize: 'cover',
-                }}
+                <div className=' w-full md:w-[80%] lg:w-[60%] mx-auto  mb-10 shadow-xl rounded-2xl  '
+                 style={{ 
+                  backgroundImage: `url(${pregnant})`,
+                  backgroundSize: 'contain', 
+                  backgroundRepeat:'no-repeat'
+              }}>
                 
-                >
+                
                 {/* Content of the welcome section */}
 
                     <div className='   realtive flex justify-center p-5'>
-                        <div className='flex flex-col md:flex-row mx-auto items-center justify-around my-5 pt-10   rounded-3xl ' style={{
+                        <div className='flex flex-col lg:flex-row mx-auto items-center justify-around my-5 pt-10   rounded-3xl ' style={{
                     backdropFilter: 'blur(10px)',
-                    background: 'rgba(0, 255, 255, 0.2)',
+                    background: 'rgba(0, 0,0, 0.2)',
                     }}>
-                            <div className='  flex flex-col items-center w-full md:w-3/5 p-5' >
-                                <h1 className='text3xl md:text-4xl tracking-wider capitalize font-semibold'>Welcome to the Healthy Pregnancy Center! </h1>
+                            <div className='  flex flex-col items-center w-full md:w-3/5 p-5 text-white' >
+                                <h1 className='text3xl md:text-4xl tracking-wider capitalize font-semibold'>Our Aim!</h1>
                                 <p className='text-sm md:text-lg pt-5'>
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut accusamus quos similique reprehenderit, suscipit culpa nesciunt voluptate in laudantium, ut veniam nisi adipisci excepturi est atque fugit, consectetur minima iste.
+                                We aim to pilot-test AI-based models to comprehensively investigate the long-term impact of various prenatal, perinatal, and early-life factors on health outcomes, developmental trajectories, and disease risks in a cohort of pregnant women and their babies throughout the pregnancy and 6 weeks postpartum in the Western Province of Sri Lanka. 
                                 </p>
                             </div>
 
-                            <div className=' w-full md:w-2/5 flex items-center justify-center' >
+                            <div className=' w-full md:w-2/5 flex items-center justify-center  ' >
                                 <ImageSlider/>  
                             </div>
 
@@ -182,84 +183,36 @@ const Home = () => {
 
         {/* blog section */}
 
-      <div id="blog-section" className='py-10 '
+      <div id="blog-section" className='py-16 min-h-screen'
       style={{
-        background: `linear-gradient(to bottom right, rgba(25, 167, 206, 0.4) 10%, rgba(0, 139, 139, 0.5)40%, rgba(144, 224, 239, 0.6) 90%)`,
+        background: `linear-gradient(to bottom right, rgba(25, 167, 206, 0.3) 10%, rgba(0, 139, 139, 0.4)40%, rgba(144, 224, 239, 0.5) 90%)`,
       }}>
           {/* Content of the blog section */}
 
           <div>
-          <h1 className=' py-10  font-semibold text-3xl md:5xl text-gray-500 tracking-widest flex justify-center uppercase'>Blog</h1>
+          <h1 className=' pb-10  font-semibold text-3xl md:5xl text-gray-500 tracking-widest flex justify-center uppercase'>Blog</h1>
 
 
-            <div className='grid grid-cols-1 xl:grid-cols-2 gap-x-[104px] gap-y-[56px]'> 
-              <div className='w-full max-w-[548px] h-full mx-auto '>
-                <img src={blog} alt='' />
-                <div className='flex justify-between items-center w-full'>
-                  <div >
-                    <h2>Aim </h2>
-                    <p>descriptio Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                       Eum adipisci nam voluptas omnis quisquam totam veritatis aut illo quis b
-                       eatae molestiae animi repudiandae ducimus, bland</p>
-                  </div>
-                </div>
-
-              </div>
-              <div className='w-full max-w-[548px] h-full mx-auto'>
-                <img src={blog} alt='' />
-                <div className='flex justify-between items-center w-full'>
-                  <div >
-                    <h2>Aim </h2>
-                    <p>descriptio Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                       Eum adipisci nam voluptas omnis quisquam totam veritatis aut illo quis b
-                       eatae molestiae animi repudiandae ducimus, bland</p>
-                  </div>
-                </div>
-
-              </div>
-              <div className='w-full max-w-[548px] h-full mx-auto'>
-                <img src={blog} alt='' />
-                <div className='flex justify-between items-center w-full'>
-                  <div >
-                    <h2>Aim </h2>
-                    <p>descriptio Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                       Eum adipisci nam voluptas omnis quisquam totam veritatis aut illo quis b
-                       eatae molestiae animi repudiandae ducimus, bland</p>
-                  </div>
-                </div>
-
-              </div>
-              <div className='w-full max-w-[548px] h-full mx-auto'>
-                <img src={blog} alt='' />
-                <div className='flex justify-between items-center w-full'>
-                  <div >
-                    <h2>Aim </h2>
-                    <p>descriptio Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                       Eum adipisci nam voluptas omnis quisquam totam veritatis aut illo quis b
-                       eatae molestiae animi repudiandae ducimus, bland</p>
-                  </div>
-                </div>
-
-              </div> 
-            </div>
-
-
-
-
-
-            {/* <h1 className=' p-5  font-semibold text-3xl md:5xl text-gray-500 tracking-widest flex justify-center uppercase'>Blog</h1>
-           
-
-            <div className='grid grid-rows-1 lg:grid-cols-2 '>
-              <BlogPost  />
-              <BlogPost  />
-              <BlogPost  />
-              <BlogPost  />
-            
-            </div> */}
-          </div>
-
-          
+            <div className='grid grid-cols-1 xl:grid-cols-2 gap-x-[104px] gap-y-[56px] max-w-[1300px] mx-auto'
+            > 
+               
+               
+              <BlogPost 
+              image={blog} 
+              title="Ai sarosh" 
+              description="jbsdfkj jsdg ksgdhf skhdf shdfsdhufios" /> 
+              <BlogPost 
+              image={blog} 
+              title="Ai sarosh" 
+              description="jbsdfkj jsdg ksgdhf skhdf shdfsdhufios" /> 
+              <BlogPost 
+              image={blog} 
+              title="Ai sarosh" 
+              description="jbsdfkj jsdg ksgdhf skhdf shdfsdhufios" /> 
+               
+                
+            </div> 
+          </div> 
       </div>
 
   
@@ -267,18 +220,30 @@ const Home = () => {
        
         {/* contact section */}
 
-      <div id="contact-section" 
+      <div id="contact-section"  
       >
         {/* Content of the contact section */} 
+        <h1 className=' py-10  font-semibold text-3xl md:5xl text-gray-500 tracking-widest flex justify-center uppercase'>contact us</h1>
+
+        <div className='grid grid-cols-1 lg:grid-cols-2   items-cente justify-center max-w-[1300px] mx-auto'>
+
+          <div className='flex flex-col items-center justify-center gap-4'> 
+            <div  data-aos-delay="100" className='bg-gray-400 rounded-2xl p-3 w-96 flex justify-center'>contact</div>
+            <div data-aos="zoom-in-up" data-aos-delay="200" className='bg-gray-400 rounded-2xl p-3 w-96 flex justify-center'>email</div>
+            <div data-aos="zoom-in-up" data-aos-delay="300" className='bg-gray-400 rounded-2xl p-3 w-96 flex justify-center'>email</div>
+             
+          </div> 
 
 
+          <div data-aos="zoom-in-up">
+            <Contact/>
+          </div>
+          
 
+        </div>
 
-
-
-
-
-        <Contact/>
+        
+        
       </div>
 
 
