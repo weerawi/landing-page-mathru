@@ -7,7 +7,7 @@ const Contact= () => {
     //for translation
     const { t } = useTranslation(["contact"])
   return ( 
-       <div class="min-h-screen pt-10 pb-32 px-1 md:px-5  py-6 flex flex-col justify-center sm:py-12"
+       <div class="  pt-10 pb-32 px-1 md:px-5  py-6 flex flex-col justify-center sm:py-12"
        data-aos="flip-left"
      data-aos-easing="ease-out-cubic"
      data-aos-duration="1400">
@@ -20,11 +20,11 @@ const Contact= () => {
               <div
               style={{
                 backdropFilter: 'blur(4px)',
-                background:   'rgba(0,0,0, 0.5)', 
+                background:   'rgba(0, 139, 139, 0.3)', 
             }} class="text-white relative px-5 py-10  shadow-md rounded-3xl sm:p-20 shadow-gray-300  ">
 
                   <div class="text-center pb-6  ">
-                      <h1 class="text-3xl tracking-widest">{t("heading")}</h1>
+                      {/* <h1 class="text-3xl tracking-widest">{t("heading")}</h1> */}
 
                       <p class="text-gray-300">
                           {t("sub")}
