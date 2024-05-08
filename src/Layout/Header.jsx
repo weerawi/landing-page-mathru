@@ -116,7 +116,7 @@ const Header = () => {
               onClick={() => scrollToSection("about-section")}
               to="#"
               className="   transition-all hover:font-semibold hover:scale-105 "
-              style={{ fontSize: localStorage.getItem('i18nextLng') === 'ta' ? '0.6rem' : '1rem' }}
+              style={{ fontSize: localStorage.getItem('i18nextLng') === 'ta' ? '0.8rem' : '1rem' }}
             >
               {t("about")}
             </Link>
@@ -125,7 +125,7 @@ const Header = () => {
               onClick={() => scrollToSection("services-section")}
               to="#"
               className="   transition-all hover:font-semibold hover:scale-105 "
-              style={{ fontSize: localStorage.getItem('i18nextLng') === 'ta' ? '0.6rem' : '1rem' }}
+              style={{ fontSize: localStorage.getItem('i18nextLng') === 'ta' ? '0.8rem' : '1rem' }}
             >
               {t("services")}
             </Link>
@@ -133,7 +133,7 @@ const Header = () => {
               onClick={() => scrollToSection("doctors-section")}
               to="#"
               className="   transition-all hover:font-semibold hover:scale-105 "
-              style={{ fontSize: localStorage.getItem('i18nextLng') === 'ta' ? '0.6rem' : '1rem' }}
+              style={{ fontSize: localStorage.getItem('i18nextLng') === 'ta' ? '0.8rem' : '1rem' }}
             >
               {t("doctors")}
             </Link>
@@ -141,7 +141,7 @@ const Header = () => {
               onClick={() => scrollToSection("blog-section")}
               to="#"
               className="   transition-all hover:font-semibold hover:scale-105 "
-              style={{ fontSize: localStorage.getItem('i18nextLng') === 'ta' ? '0.6rem' : '1rem' }}
+              style={{ fontSize: localStorage.getItem('i18nextLng') === 'ta' ? '0.8rem' : '1rem' }}
             >
               {t("blog")}
             </Link>
@@ -149,33 +149,41 @@ const Header = () => {
               onClick={() => scrollToSection("contact-section")}
               to="#"
               className="   transition-all hover:font-semibold hover:scale-105 "
-              style={{ fontSize: localStorage.getItem('i18nextLng') === 'ta' ? '0.6rem' : '1rem' }}
+              style={{ fontSize: localStorage.getItem('i18nextLng') === 'ta' ? '0.8rem' : '1rem' }}
             >
               {t("contact")}
             </Link>
-            <select value={localStorage.getItem("i18nextLng")} onChange={handleLanguageChange} className='bg-transparent border-transparent transition-all hover:font-semibold hover:scale-105 ' style={{ fontSize: localStorage.getItem('i18nextLng') === 'ta' ? '0.6rem' : '1rem' }}>
+            
+          </div>
+
+          <div className="flex gap-3">
+
+            <select value={localStorage.getItem("i18nextLng")} onChange={handleLanguageChange} className='bg-transparent border-transparent transition-all hover:font-semibold hover:scale-105 ' style={{ fontSize: localStorage.getItem('i18nextLng') === 'ta' ? '0.8rem' : '1rem' }}>
               <option value="en">English</option>
               <option value="ta">தமிழ்</option>
               <option value="sn">සිංහල</option>
             </select>
-          </div>
 
-          {/* Mobile icon start */}
-          <div
-            className="w-10 lg:w-12 h-10 lg:h-12 rounded-full flex lg:hidden justify-center 
-                    items-center text-gray-500 bg-gray-300 hover:bg-gray-500 hover:text-gray-200 cursor-pointer   shadow-gray-800 shadow-inner "
-            onClick={() => setMobileMenu(!mobileMenu)}
-          >
-            {mobileMenu ? (
-              <VscChromeClose className="text-[16px]" />
-            ) : (
-              <BiMenuAltRight
-                className="text-[20px] z-10"
-                // onClick={() => setMobileMenu(true)}
-              />
-            )}
+
+            {/* Mobile icon start */}
+            <div
+              className="w-10 lg:w-12 h-10 lg:h-12 rounded-full flex lg:hidden justify-center 
+                      items-center text-gray-500 bg-gray-300 hover:bg-gray-500 hover:text-gray-200 cursor-pointer   shadow-gray-800 shadow-inner "
+              onClick={() => setMobileMenu(!mobileMenu)}
+            >
+              {mobileMenu ? (
+                <VscChromeClose className="text-[16px]" />
+              ) : (
+                <BiMenuAltRight
+                  className="text-[20px] z-10"
+                  // onClick={() => setMobileMenu(true)}
+                />
+              )}
+            </div>
+            {/* Mobile icon end */}
+
           </div>
-          {/* Mobile icon end */}
+          
         </div>
       </div>
     </header>

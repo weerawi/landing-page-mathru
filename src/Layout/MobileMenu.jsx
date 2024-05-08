@@ -74,11 +74,7 @@ const MobileMenu = ({ mobileclick }) => {
                  style={{ fontSize: localStorage.getItem('i18nextLng') === 'ta' ? '0.6rem' : '1rem' }}
                   >{t("contact")}</Link> 
 
-                  <select value={localStorage.getItem("i18nextLng")} onChange={handleLanguageChange} className='bg-transparent border-transparent transition-all hover:font-semibold hover:scale-105 ' style={{ fontSize: localStorage.getItem('i18nextLng') === 'ta' ? '0.6rem' : '1rem' }}>
-                    <option value="en">English</option>
-                    <option value="ta">தமிழ்</option>
-                    <option value="sn">සිංහල</option>
-                  </select>  
+                  
                 </div>
             </div>
         </div>

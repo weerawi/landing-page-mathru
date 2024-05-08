@@ -6,12 +6,7 @@ import SimpleImageSlider from "react-simple-image-slider";
  
 
 const ImageSlider = () => {
-    const [currentIndex, setCurrentIndex] = useState(1);
-
-    // Function to handle slide change
-    const handleSlideChange = (index) => {
-        setCurrentIndex(index - 1);
-    };
+    
 
     return (
         <div className="  items-center my-3   ">
@@ -24,8 +19,7 @@ const ImageSlider = () => {
                 showBullets={true} 
                 autoPlay={true}
                 autoPlayDelay={3}
-                loop={true}
-                onChange={handleSlideChange} // Pass the entire event object
+                loop={true} 
             /> 
         </div>
     );

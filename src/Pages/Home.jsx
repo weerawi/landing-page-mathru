@@ -31,7 +31,13 @@ import blog from '../assets/blog1.png'
 //contact-section
 import Contact from './Contact' 
 
+//lan translation
+import { useTranslation } from 'react-i18next';
+
+
 const Home = () => {
+
+  const { t } = useTranslation(["welcome"])
 
     //Our tema swiper params in doctors section
  
@@ -95,7 +101,8 @@ const Home = () => {
         <div className=' items-center h-[100vh] my-atuo '>
 
             <div style={{backgroundColor: 'rgb(211, 211, 211) '}}id="doctors-section" className='py-5 
-             rounded-tr-[100px] sm:rounded-tr-[130px] md:rounded-tr-[180px] xl:rounded-tr-[250px] rounded-tl-[100px] sm:rounded-tl-[130px] md:rounded-tl-[180px] xl:rounded-tl-[250px]  '>
+            rounded-tl-[100px] sm:rounded-tl-[130px] md:rounded-tl-[180px] xl:rounded-tl-[250px] 
+             rounded-tr-[100px] sm:rounded-tr-[130px] md:rounded-tr-[180px] xl:rounded-tr-[250px]  '>
                 {/* Content of the doctors section */}
                 <div className='flex items-center justify-center py-5'>
                     <div className='py-5'>
@@ -155,9 +162,9 @@ const Home = () => {
                     background: 'rgba(0, 0,0, 0.2)',
                     }}>
                             <div className='  flex flex-col items-center w-full md:w-3/5 p-5 text-white' >
-                                <h1 className='text3xl md:text-4xl tracking-wider capitalize font-semibold'>Our Aim!</h1>
+                                <h1 className='text3xl md:text-4xl tracking-wider capitalize font-semibold'>{t("heading")} </h1>
                                 <p className='text-sm md:text-lg pt-5'>
-                                We aim to pilot-test AI-based models to comprehensively investigate the long-term impact of various prenatal, perinatal, and early-life factors on health outcomes, developmental trajectories, and disease risks in a cohort of pregnant women and their babies throughout the pregnancy and 6 weeks postpartum in the Western Province of Sri Lanka. 
+                                {t("body")} 
                                 </p>
                             </div>
 
@@ -183,9 +190,15 @@ const Home = () => {
 
         {/* blog section */}
 
-      <div id="blog-section" className='py-16 min-h-screen'
+      <div id="blog-section" className='pt-10 pb-24 min-h-screen 
+      rounded-tl-[100px] sm:rounded-tl-[130px] md:rounded-tl-[180px] xl:rounded-tl-[250px] 
+      rounded-br-[100px] sm:rounded-br-[130px] md:rounded-br-[200px] xl:rounded-br-[300px]
+      '
       style={{
-        background: `linear-gradient(to bottom right, rgba(25, 167, 206, 0.3) 10%, rgba(0, 139, 139, 0.4)40%, rgba(144, 224, 239, 0.5) 90%)`,
+        background: `linear-gradient(to bottom right, rgba(25, 167, 206, 0.1) 10%, rgba(0, 139, 139, 0.2)40%, rgba(144, 224, 239, 0.3) 90%)`,
+        boxShadow: 'rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px'
+      
+      
       }}>
           {/* Content of the blog section */}
 
@@ -193,7 +206,7 @@ const Home = () => {
           <h1 className=' pb-10  font-semibold text-3xl md:5xl text-gray-500 tracking-widest flex justify-center uppercase'>Blog</h1>
 
 
-            <div className='grid grid-cols-1 xl:grid-cols-2 gap-x-[104px] gap-y-[56px] max-w-[1300px] mx-auto'
+            <div className=' grid grid-cols-1 xl:grid-cols-2 gap-x-[104px] gap-y-[56px] max-w-[1300px] mx-auto'
             > 
                
                
@@ -223,7 +236,7 @@ const Home = () => {
       <div id="contact-section"  
       >
         {/* Content of the contact section */} 
-        <h1 className=' py-10  font-semibold text-3xl md:5xl text-gray-500 tracking-widest flex justify-center uppercase'>contact us</h1>
+        <h1 className=' py-20 font-semibold text-3xl md:5xl text-gray-500 tracking-widest flex justify-center uppercase'>contact us</h1>
 
         <div className='grid grid-cols-1 lg:grid-cols-2   items-cente justify-center max-w-[1300px] mx-auto'>
 
