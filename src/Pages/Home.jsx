@@ -24,8 +24,15 @@ import doctor3 from '../assets/doctor3.jpg';
 //contact-section
 import Contact from './Contact'
 
+//for translation
+import { useTranslation } from 'react-i18next';
+
 
 const Home = () => {
+
+  //for translation
+  const { t } = useTranslation(["doctors", "welcome"])
+
 
     //Our tema swiper params in doctors section
  
@@ -92,7 +99,7 @@ const Home = () => {
                 {/* Content of the doctors section */}
                 <div className='flex items-center justify-center py-5'>
                     <div className='py-5'>
-                        <h1 className=' p-5  font-semibold text-3xl md:5xl text-gray-500 tracking-widest flex justify-center uppercase'>Our Specialised Team</h1>
+                        <h1 className=' p-5  font-semibold text-3xl md:5xl text-gray-500 tracking-widest flex justify-center uppercase'>{t("doctors:heading")}</h1>
                     </div> 
                 </div>
 
@@ -152,9 +159,10 @@ const Home = () => {
                     background: 'rgba(0, 255, 255, 0.4)',
                     }}>
                             <div className='  flex flex-col items-center w-full md:w-3/5 p-5' >
-                                <h1 className='text3xl md:text-4xl tracking-wider capitalize font-semibold'>Welcome to the Healthy Pregnancy Center! </h1>
+                                <h1 className='text3xl md:text-4xl tracking-wider capitalize font-semibold' style={{ fontSize: localStorage.getItem('i18nextLng') === 'ta' ? '1.5rem' : '1.8rem' }}
+            >{t("welcome:heading")} </h1>
                                 <p className='text-sm md:text-lg pt-5'>
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut accusamus quos similique reprehenderit, suscipit culpa nesciunt voluptate in laudantium, ut veniam nisi adipisci excepturi est atque fugit, consectetur minima iste.
+                                    {t("welcome:body")}
                                 </p>
                             </div>
 
