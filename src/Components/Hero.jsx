@@ -49,12 +49,12 @@ const Hero = () => {
                   typeSpeed={40}
                   backSpeed={50}
                   attr="placeholder"
-                  loop
+                  loop 
                 >
                   <input
-                    className="ml-2 bg-transparent text-white text-xl md:text-2xl"
+                    className="ml-2 bg-transparent text-xl md:text-2xl"
                     type="text"  
-                    disabled 
+                    disabled  
                   />
                 </ReactTyped>
 

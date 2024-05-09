@@ -17,7 +17,7 @@ import ProfileCard from '../Components/ProfileCard'
 //doctors-section
 import Swiper from 'react-id-swiper';
 import 'swiper/css/swiper.css';
-import doctor1 from '../assets/doctor1.jpg';
+import profile from '../assets/profile.png';
 import doctor2 from '../assets/doctor2.jpg';
 import doctor3 from '../assets/doctor3.jpg';
 
@@ -30,9 +30,13 @@ import blog from '../assets/blog1.png'
 
 //contact-section
 import Contact from './Contact' 
+import { MdCall, MdEmail } from "react-icons/md";
+
+
 
 //lan translation
 import { useTranslation } from 'react-i18next';
+import Title from '../Components/Title'
 
 
 const Home = () => {
@@ -74,7 +78,7 @@ const Home = () => {
 
         {/* Hero section */}
 
-      <div id="hero-section" >
+      <div id="hero-section"  >
         {/* Content of the hero section */} 
         <Hero/> 
         
@@ -98,32 +102,32 @@ const Home = () => {
 
         {/* doctors section */}
 
-        <div className=' items-center h-[100vh] my-atuo '>
+        <div className=' items-center h-[100vh] my-atuo md:mb-20'>
 
             <div style={{backgroundColor: 'rgb(211, 211, 211) '}}id="doctors-section" className='py-5 
             rounded-tl-[100px] sm:rounded-tl-[130px] md:rounded-tl-[180px] xl:rounded-tl-[250px] 
              rounded-tr-[100px] sm:rounded-tr-[130px] md:rounded-tr-[180px] xl:rounded-tr-[250px]  '>
                 {/* Content of the doctors section */}
-                <div className='flex items-center justify-center py-5'>
-                    <div className='py-5'>
-                        <h1 className=' p-5  font-semibold text-3xl md:5xl text-gray-500 tracking-widest flex justify-center uppercase'>Our Team</h1>
-                    </div> 
-                </div>
+                 
+
+                <Title title="Our Team" />
+
+                
 
 
                 <div className='py-10'>
                     <Swiper {...params} >
-                        <div><ProfileCard image={doctor1} name="Kapila Jayaratne" position="National Programme Manager - Child Morbidity & Mortality" /></div>
-                        <div><ProfileCard image={doctor2} name="Professor Vajira Dissanayake" position="Geneticist / Dean - Faculty of Medicine, University of Colombo" /></div>
-                        <div><ProfileCard image={doctor3} name="Chithramalee de Silva" position="Director – Maternal & Child Health" /></div>
-                        <div><ProfileCard image={doctor1} name="Chamli Pushpakumara" position="Dean - Faculty of Computing and Technology, University of Kelaniya" /></div>
-                        <div><ProfileCard image={doctor2} name="Dineshani Hettiarachchi" position="Senior Lecturer" /></div>
-                        <div><ProfileCard image={doctor3} name="R.R.L.U.I. Rajapaksha" position="Senior Lecturer" /></div>
-                        <div><ProfileCard image={doctor1} name="MRM Rishard" position="Honorary Consultant & Senior Lecturer" /></div>
-                        <div><ProfileCard image={doctor1} name="Roshan Hewapathirana" position="Senior Lecturer" /></div>
-                        <div><ProfileCard image={doctor1} name="P. W. Prasad Chathurangana" position="Honorary Consultant & Senior Lecturer" /></div>
-                        <div><ProfileCard image={doctor1} name="Kaushalya Kasturiarachchi" position="National Programme Manager – Monitoring & Evaluation" /></div>
-                        <div><ProfileCard image={doctor1} name="Sidath R. Liyanage" position="Senior Lecturer" /></div>
+                        <div><ProfileCard image={profile} name="Kapila Jayaratne" position="National Programme Manager - Child Morbidity & Mortality" /></div>
+                        <div><ProfileCard image={profile} name="Professor Vajira Dissanayake" position="Geneticist / Dean - Faculty of Medicine, University of Colombo" /></div>
+                        <div><ProfileCard image={profile} name="Chithramalee de Silva" position="Director – Maternal & Child Health" /></div>
+                        <div><ProfileCard image={profile} name="Chamli Pushpakumara" position="Dean - Faculty of Computing and Technology, University of Kelaniya" /></div>
+                        <div><ProfileCard image={profile} name="Dineshani Hettiarachchi" position="Senior Lecturer" /></div>
+                        <div><ProfileCard image={profile} name="R.R.L.U.I. Rajapaksha" position="Senior Lecturer" /></div>
+                        <div><ProfileCard image={profile} name="MRM Rishard" position="Honorary Consultant & Senior Lecturer" /></div>
+                        <div><ProfileCard image={profile} name="Roshan Hewapathirana" position="Senior Lecturer" /></div>
+                        <div><ProfileCard image={profile} name="P. W. Prasad Chathurangana" position="Honorary Consultant & Senior Lecturer" /></div>
+                        <div><ProfileCard image={profile} name="Kaushalya Kasturiarachchi" position="National Programme Manager – Monitoring & Evaluation" /></div>
+                        <div><ProfileCard image={profile} name="Sidath R. Liyanage" position="Senior Lecturer" /></div>
                     </Swiper>
                 </div>
                 
@@ -141,7 +145,8 @@ const Home = () => {
  
          {/*welcome section   */}
 
-         <div className='min-h-screen flex items-center' >
+         <div className='min-h-[100vh]   flex items-center md:my-16' 
+         data-aos="zoom-in-up" data-aos-delay="200" >
 
             {/* <img src={pregnant} alt='pregnant png' /> */}
          
@@ -162,7 +167,8 @@ const Home = () => {
                     background: 'rgba(0, 0,0, 0.2)',
                     }}>
                             <div className='  flex flex-col items-center w-full md:w-3/5 p-5 text-white' >
-                                <h1 className='text3xl md:text-4xl tracking-wider capitalize font-semibold'>{t("heading")} </h1>
+                                 <Title title={t("heading")}  />
+                                
                                 <p className='text-sm md:text-lg pt-5'>
                                 {t("body")} 
                                 </p>
@@ -195,7 +201,7 @@ const Home = () => {
       rounded-br-[100px] sm:rounded-br-[130px] md:rounded-br-[200px] xl:rounded-br-[300px]
       '
       style={{
-        background: `linear-gradient(to bottom right, rgba(25, 167, 206, 0.1) 10%, rgba(0, 139, 139, 0.2)40%, rgba(144, 224, 239, 0.3) 90%)`,
+        background: `rgba(0, 0, 0, 0.17)`,
         boxShadow: 'rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px'
       
       
@@ -203,8 +209,7 @@ const Home = () => {
           {/* Content of the blog section */}
 
           <div>
-          <h1 className=' pb-10  font-semibold text-3xl md:5xl text-gray-500 tracking-widest flex justify-center uppercase'>Blog</h1>
-
+           <Title title="blog" />
 
             <div className=' grid grid-cols-1 xl:grid-cols-2 gap-x-[104px] gap-y-[56px] max-w-[1300px] mx-auto'
             > 
@@ -236,14 +241,17 @@ const Home = () => {
       <div id="contact-section"  
       >
         {/* Content of the contact section */} 
-        <h1 className=' py-20 font-semibold text-3xl md:5xl text-gray-500 tracking-widest flex justify-center uppercase'>contact us</h1>
-
+        
+        <Title title="contact us" />
+        
         <div className='grid grid-cols-1 lg:grid-cols-2   items-cente justify-center max-w-[1300px] mx-auto'>
 
-          <div className='flex flex-col items-center justify-center gap-4'> 
-            <div  data-aos-delay="100" className='bg-gray-400 rounded-2xl p-3 w-96 flex justify-center'>contact</div>
-            <div data-aos="zoom-in-up" data-aos-delay="200" className='bg-gray-400 rounded-2xl p-3 w-96 flex justify-center'>email</div>
-            <div data-aos="zoom-in-up" data-aos-delay="300" className='bg-gray-400 rounded-2xl p-3 w-96 flex justify-center'>email</div>
+          <div className='flex flex-col items-center justify-center gap-4 text-white'> 
+            <div  data-aos-delay="100" className='bg-cyan-900 rounded-2xl p-3 w-96 flex justify-center'>
+            <MdCall /> contact</div>
+            <div data-aos="zoom-in-up" data-aos-delay="200" className='bg-cyan-900 rounded-2xl p-3 w-96 flex justify-center'>
+            <MdEmail />email</div>
+            <div data-aos="zoom-in-up" data-aos-delay="300" className='bg-cyan-900 rounded-2xl p-3 w-96 flex justify-center'>email</div>
              
           </div> 
 
