@@ -21,6 +21,9 @@ import doctor1 from '../assets/doctor1.jpg';
 import doctor2 from '../assets/doctor2.jpg';
 import doctor3 from '../assets/doctor3.jpg';
 
+// blog section
+import blog1 from '../assets/blog1.png'
+
 //contact-section
 import Contact from './Contact'
 
@@ -152,9 +155,17 @@ const Home = () => {
                     background: 'rgba(0, 255, 255, 0.4)',
                     }}>
                             <div className='  flex flex-col items-center w-full md:w-3/5 p-5' >
-                                <h1 className='text3xl md:text-4xl tracking-wider capitalize font-semibold'>Welcome to the Healthy Pregnancy Center! </h1>
+                                <h1 className='text3xl md:text-4xl tracking-wider capitalize font-semibold'>Project Aim </h1>
                                 <p className='text-sm md:text-lg pt-5'>
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut accusamus quos similique reprehenderit, suscipit culpa nesciunt voluptate in laudantium, ut veniam nisi adipisci excepturi est atque fugit, consectetur minima iste.
+                                  <li>
+                                  To determine the effectiveness of an AI-based System for early detection of adverse pregnancy outcomes.
+                                  </li>
+                                  <li>
+                                  To provide proactive interventions and describe immediate and distant multidimensional (clinical, epidemiological, genetic, service delivery) correlates of maternal, fetal and newborn morbidity and mortality outcomes in pregnancy. 
+                                  </li>
+                                  <li>
+                                  This will be conducted in a cohort of pregnant women in the Western Province of Sri Lanka. 
+                                  </li>
                                 </p>
                             </div>
 
@@ -174,7 +185,7 @@ const Home = () => {
 
 
 
-        {/* blog section */}
+         {/* blog section */}
 
       <div id="blog-section" className='py-10 bg-gray-300'>
           {/* Content of the blog section */}
@@ -185,7 +196,7 @@ const Home = () => {
            
 
             <div className='grid grid-rows-1 lg:grid-cols-2 '>
-            <BlogPost  />
+            <BlogPost  image={blog1} description="උපදින දරුවාගේ සෞඛ්‍ය ගැන කලින්ම දැනගන්න... AI වලින් මවටත් බිලිඳාටත් සුව සලසන අලුත් ක්‍රමය..."/>
             <BlogPost  />
             <BlogPost  />
             <BlogPost  />
@@ -195,6 +206,7 @@ const Home = () => {
 
           
       </div>
+
 
   
 
