@@ -160,7 +160,7 @@ const Home = () => {
          </div>
 
 
-         {/* <TestiMonials/> */}
+       
     
 
          {/* blog section */}
