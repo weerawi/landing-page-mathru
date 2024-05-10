@@ -1,13 +1,15 @@
 // Hero.jsx
 
 import React from 'react'; 
-import hero from '../assets/hero.png'
-import wavy from '../assets/wavy1.png'
+import hero from '../assets/hero.png' 
 import { ReactTyped } from "react-typed";
+//for translation
+import { useTranslation } from 'react-i18next';
 
 
 const Hero = () => {
-   
+  //for translation
+  const { t } = useTranslation(["hero"])
 
   return (
     <div className='relative ' 
@@ -40,18 +42,18 @@ const Hero = () => {
 
                 <ReactTyped
                   strings={[
-                    "Welcome to Mathru",
+                    t("welcome")
                     
                   ]}
                   typeSpeed={40}
                   backSpeed={50}
                   attr="placeholder"
-                  loop
+                  loop 
                 >
                   <input
-                    className="ml-2 bg-transparent text-white text-xl md:text-2xl"
+                    className="ml-2 bg-transparent text-xl md:text-2xl"
                     type="text"  
-                    disabled 
+                    disabled  
                   />
                 </ReactTyped>
 
@@ -64,10 +66,12 @@ const Hero = () => {
                 /> */}
 
 
-                <p className='lg:text-lg md:text-base text-sm font-roboto w-auto md:w-[500px]'> Have questions about Getting Pregnant ?,
-                    How to have a Healthy Pregnancy ,
-                    How to explore options for an Unplanned Pregnancy?, 
-                    We’ll help guide you through every pregnancy possibility.</p>
+                <p 
+                  className='lg:text-lg md:text-base text-sm font-roboto w-auto md:w-[500px]'  
+                  style={{ fontSize: localStorage.getItem('i18nextLng') === 'ta' ? '0.9rem' : '1rem' }}
+                >
+                  {t("message")}
+                </p>
                 <div class="my-5 flex items-center space-x-3"  
                 data-aos="fade-up"
                 data-aos-delay="300"

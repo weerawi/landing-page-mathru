@@ -1,0 +1,9 @@
+{ 
+    "sub": "Fill up the form below to send us a message.",
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Type your message here...",
+    "send": "Send",
+    "clear": "Clear"
+}

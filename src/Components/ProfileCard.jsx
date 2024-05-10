@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import {
   TiSocialLinkedin,
   TiSocialFacebook,
@@ -11,6 +11,7 @@ const ProfileCard = (props) => {
     <div
       className="container mx-auto  flex justify-center my-10  relative"
       data-aos="zoom-in-up"
+      aos-duration="1000"
     >
       <div
         className="  transform transition-transform duration-500   cursor-pointer shadow-gray-600 shadow-lg rounded-full overflow-hidden 
@@ -23,7 +24,7 @@ const ProfileCard = (props) => {
         />
         <div
           className={`  absolute text-gray-600 bg-white bg-opacity-60 backdrop-blur-md h-64 hover:h-72 pt-[5%] px-5 flex flex-col items-center  
-        w-full transition-all duration-1000  bottom-[-155px] hover:bottom-[-50px] shadow-inner border-t border-white border-opacity-60   `}
+        w-full transition-all duration-1000  bottom-[-155px] hover:bottom-[-35px] shadow-inner border-t border-white border-opacity-60   `}
         >
           <div className="text-xl pt-1">
             <LiaAngleDoubleUpSolid />
@@ -41,7 +42,7 @@ const ProfileCard = (props) => {
               className=" tracking-wider text-center transition-transform duration-600 font-medium  opacity-100 transform translate-y-0 delay-200 pt-2 
              text-xs md:text-LG   "
             >
-              Dr.{props.position}
+              {props.position}
             </h4>
           </div>
 
