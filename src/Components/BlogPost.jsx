@@ -23,9 +23,9 @@ return (
        <img className='rounded-xl shadow-md' src={props.image} alt='' />
         
       
-      <div className='flex justify-between items-center w-full py-5 text-gray-200'>
+      <div className='flex justify-between items-center w-full py-5 text-white'>
         <div >
-          <h2 className='text-lg md:text-xl font-poppins'>{props.title}</h2>
+          <h2 className='text-lg md:text-xl font-bold capitalize font-poppins'>{props.title}</h2>
           <p className='text-sm md:text-base font-roboto'>{props.description}</p>
         </div>
       </div>
