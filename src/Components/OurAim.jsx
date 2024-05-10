@@ -23,15 +23,18 @@ const OurAim = () => {
                     backdropFilter: 'blur(10px)',
                     background: 'rgba(0, 0,0, 0.4)',
                     }}>
-                            <div className='  flex flex-col items-center w-full md:w-3/5 p-5 text-white' >
+                            <div className='  flex flex-col items-center w-full md:w-3/5 p-5 text-white' 
+                            >
                                  <Title title={t("heading")}  />
                                 
-                                <p className='text-sm md:text-lg pt-5'>
+                                <div className='text-sm md:text-lg pt-5'data-aos="fade-up"
+                            data-aos-duration="1000">
                                 {t("body")} 
-                                </p>
+                                </div>
                             </div>
 
-                            <div className=' w-full md:w-2/5 flex items-center justify-center  ' >
+                            <div className=' w-full md:w-2/5 flex items-center justify-center  ' 
+                            data-aos="zoom-out" data-aos-duration="1000">
                                 <ImageSlider/>  
                             </div>
 
