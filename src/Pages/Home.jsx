@@ -14,9 +14,16 @@ import ProfileCard from '../Components/ProfileCard'
 //doctors-section
 import Swiper from 'react-id-swiper';
 import 'swiper/css/swiper.css';
-import doctor1 from '../assets/doctor1.jpg';
-import doctor2 from '../assets/doctor2.jpg';
-import doctor3 from '../assets/doctor3.jpg';
+import profile from '../assets/profile.png'; 
+
+//welcome-section 
+
+
+
+
+//blog-section
+import BlogPost from '../Components/BlogPost' 
+import blog from '../assets/blog1.png'
 
 //contact-section
 import Contact from './Contact' 
@@ -135,35 +142,15 @@ const Home = () => {
          data-aos="zoom-in-up" data-aos-delay="200"  > 
                 {/* Content of the welcome section */} 
 
-                    <div className='   realtive flex justify-center p-5'>
-                        <div className='flex flex-col md:flex-row mx-auto items-center justify-around my-5 pt-10   rounded-3xl ' style={{
-                    backdropFilter: 'blur(10px)',
-                    background: 'rgba(0, 255, 255, 0.4)',
-                    }}>
-                            <div className='  flex flex-col items-center w-full md:w-3/5 p-5' >
-                                <h1 className='text3xl md:text-4xl tracking-wider capitalize font-semibold'>Welcome to the Healthy Pregnancy Center! </h1>
-                                <p className='text-sm md:text-lg pt-5'>
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut accusamus quos similique reprehenderit, suscipit culpa nesciunt voluptate in laudantium, ut veniam nisi adipisci excepturi est atque fugit, consectetur minima iste.
-                                </p>
-                            </div>
-
-                            <div className=' w-full md:w-2/5 flex items-center justify-center' >
-                                <ImageSlider/>  
-                            </div>
-
-                            
-                        </div>
-                    </div> 
-
-                </div>
-         
+                    <OurAim/>
+  
          </div>
 
 
        
     
 
-         {/* blog section */}
+        {/* blog section */}
 
       <div id="blog-section" className=' min-h-screen  
       rounded-br-[100px] sm:rounded-br-[130px] md:rounded-br-[200px] xl:rounded-br-[300px]
@@ -178,23 +165,34 @@ const Home = () => {
       }}>
           {/* Content of the blog section */}
 
-          <div>
+          <div className='pt-10 pb-24    rounded-br-[100px] sm:rounded-br-[130px] md:rounded-br-[200px] xl:rounded-br-[300px]' 
+          style={{ 
+            background: `rgba(0, 0, 0, 0.37)`,
+             
+          }}>
+           <Title title="blog" />
 
-          <h1 className=' p-5  font-semibold text-3xl md:5xl text-gray-500 tracking-widest flex justify-center uppercase'>Blog</h1>
-           
-
-            <div className='grid grid-rows-1 lg:grid-cols-2 '>
-            <BlogPost  />
-            <BlogPost  />
-            <BlogPost  />
-            <BlogPost  />
-           
-          </div>
-          </div>
-
-          
+            <div className=' grid grid-cols-1 xl:grid-cols-2 gap-x-[104px] gap-y-[56px] max-w-[1300px] mx-auto'
+            > 
+               
+               
+              <BlogPost 
+              image={blog} 
+              title="Ai sarosh" 
+              description="jbsdfkj jsdg ksgdhf skhdf shdfsdhufios" /> 
+              <BlogPost 
+              image={blog} 
+              title="Ai sarosh" 
+              description="jbsdfkj jsdg ksgdhf skhdf shdfsdhufios" /> 
+              <BlogPost 
+              image={blog} 
+              title="Ai sarosh" 
+              description="jbsdfkj jsdg ksgdhf skhdf shdfsdhufios" /> 
+               
+                
+            </div> 
+          </div> 
       </div>
-
 
   
 
