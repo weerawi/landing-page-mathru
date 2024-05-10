@@ -4,7 +4,8 @@ const Title = (props) => {
   return (
     
 
-    <div className='flex items-center justify-center  ' >  
+    <div className='flex items-center justify-center  '  data-aos="fade-down" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom"
+    >  
         <div className='pt-16 pb-10   '>
             <h1 className='pb-2 font-semibold text-3xl md:5xl text-cyan-500 tracking-widest
             flex justify-center uppercase border-cyan-400 border-b-2'
