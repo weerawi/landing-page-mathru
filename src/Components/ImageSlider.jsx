@@ -1,4 +1,4 @@
-import React, { useState }  from 'react';
+import React  from 'react';
 import slide_data from '../assets/slide_data.js';
 import SimpleImageSlider from "react-simple-image-slider";
  

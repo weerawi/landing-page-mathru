@@ -1,8 +1,7 @@
 // Hero.jsx
 
 import React from 'react'; 
-import hero from '../assets/hero.png'
-import wavy from '../assets/wavy1.png'
+import hero from '../assets/hero.png' 
 import { ReactTyped } from "react-typed";
 //for translation
 import { useTranslation } from 'react-i18next';

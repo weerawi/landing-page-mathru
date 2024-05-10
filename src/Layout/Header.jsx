@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import mobilebg from "../assets/contactfront.jpg";
+import { Link } from "react-router-dom"; 
 import logo from "../assets/logo_new.png";
 import { Drawer, makeStyles } from "@material-ui/core";
 import { BiMenuAltRight } from "react-icons/bi";
