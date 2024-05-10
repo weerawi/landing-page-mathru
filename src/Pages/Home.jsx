@@ -24,6 +24,9 @@ import doctor3 from '../assets/doctor3.jpg';
 //welcome-section
 import pregnant from '../assets/pregnant.png'
 
+
+
+
 //blog-section
 import BlogPost from '../Components/BlogPost' 
 import blog from '../assets/blog1.png'
@@ -37,6 +40,7 @@ import { MdCall, MdEmail } from "react-icons/md";
 //lan translation
 import { useTranslation } from 'react-i18next';
 import Title from '../Components/Title'
+import OurAim from '../Components/OurAim'
 
 
 const Home = () => {
@@ -145,62 +149,26 @@ const Home = () => {
  
          {/*welcome section   */}
 
-         <div className='min-h-[100vh]   flex items-center md:my-16' 
-         data-aos="zoom-in-up" data-aos-delay="200" >
+         <div className='min-h-screen my-10 flex items-center ' 
+         data-aos="zoom-in-up" data-aos-delay="200"  > 
+                {/* Content of the welcome section */} 
 
-            {/* <img src={pregnant} alt='pregnant png' /> */}
-         
-         
-                <div className=' w-full md:w-[80%] lg:w-[60%] mx-auto  mb-10 shadow-xl rounded-2xl  '
-                 style={{ 
-                  backgroundImage: `url(${pregnant})`,
-                  backgroundSize: 'contain', 
-                  backgroundRepeat:'no-repeat'
-              }}>
-                
-                
-                {/* Content of the welcome section */}
-
-                    <div className='   realtive flex justify-center p-5'>
-                        <div className='flex flex-col lg:flex-row mx-auto items-center justify-around my-5 pt-10   rounded-3xl ' style={{
-                    backdropFilter: 'blur(10px)',
-                    background: 'rgba(0, 0,0, 0.2)',
-                    }}>
-                            <div className='  flex flex-col items-center w-full md:w-3/5 p-5 text-white' >
-                                 <Title title={t("heading")}  />
-                                
-                                <p className='text-sm md:text-lg pt-5'>
-                                {t("body")} 
-                                </p>
-                            </div>
-
-                            <div className=' w-full md:w-2/5 flex items-center justify-center  ' >
-                                <ImageSlider/>  
-                            </div>
-
-                            
-                        </div>
-                    </div> 
-
-                </div>
-         
+                    <OurAim/>
+  
          </div>
 
 
-         
-         
-         
-
-
-
+         {/* <TestiMonials/> */}
+    
 
         {/* blog section */}
 
-      <div id="blog-section" className='pt-10 pb-24 min-h-screen 
-      rounded-tl-[100px] sm:rounded-tl-[130px] md:rounded-tl-[180px] xl:rounded-tl-[250px] 
+      <div id="blog-section" className=' min-h-screen  
       rounded-br-[100px] sm:rounded-br-[130px] md:rounded-br-[200px] xl:rounded-br-[300px]
       '
       style={{
+        backgroundImage: `url(${mother})`,
+        backgroundSize:'cover',
         background: `rgba(0, 0, 0, 0.17)`,
         boxShadow: 'rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px'
       
@@ -208,7 +176,11 @@ const Home = () => {
       }}>
           {/* Content of the blog section */}
 
-          <div>
+          <div className='pt-10 pb-24    rounded-br-[100px] sm:rounded-br-[130px] md:rounded-br-[200px] xl:rounded-br-[300px]' 
+          style={{ 
+            background: `rgba(0, 0, 0, 0.37)`,
+             
+          }}>
            <Title title="blog" />
 
             <div className=' grid grid-cols-1 xl:grid-cols-2 gap-x-[104px] gap-y-[56px] max-w-[1300px] mx-auto'
